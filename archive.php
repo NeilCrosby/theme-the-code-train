@@ -1,0 +1,63 @@
+<?php get_header(); ?>
+<div class="left">
+	
+	<?php if (have_posts()) : ?>
+
+ 	  <?php $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
+ 	  <?php /* If this is a category archive */ if (is_category()) { ?>
+		<h2>Archive for the &#8216;<?php single_cat_title(); ?>&#8217; Category</h2>
+ 	  <?php /* If this is a tag archive */ } elseif( is_tag() ) { ?>
+		<h2>Posts Tagged &#8216;<?php single_tag_title(); ?>&#8217;</h2>
+ 	  <?php /* If this is a daily archive */ } elseif (is_day()) { ?>
+		<h2>Archive for <?php the_time('F jS, Y'); ?></h2>
+ 	  <?php /* If this is a monthly archive */ } elseif (is_month()) { ?>
+		<h2>Archive for <?php the_time('F, Y'); ?></h2>
+ 	  <?php /* If this is a yearly archive */ } elseif (is_year()) { ?>
+		<h2>Archive for <?php the_time('Y'); ?></h2>
+	  <?php /* If this is an author archive */ } elseif (is_author()) { ?>
+		<h2>Author Archive</h2>
+ 	  <?php /* If this is a paged archive */ } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
+		<h2>Blog Archives</h2>
+ 	  <?php } ?>
+
+		<?php while (have_posts()) : the_post(); ?>
+		
+		<h2>* <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+<p>Posted on <?php the_time('F jS, Y') ?> by <?php the_author() ?>. Filed under <strong><?php the_category(', ') ?></strong>.</p><br />
+<div class="articles">
+    <?php the_excerpt(); ?>
+    <p><a href="<?php the_permalink() ?>" rel="bookmark">Continue reading...</a></p>
+<p class="showtags"><?php if (function_exists('the_tags')) the_tags(__('Tags: ','ml'), ', ', ''); ?>.</p><div class="count">&nbsp;&nbsp;&nbsp; <?php comments_popup_link('No Comments', '<span>(1)</span> Comment', '<span>(%)</span> Comments'); ?></div>
+<div style="clear: both;"> </div>
+</div><br /><br />
+	<!-- end content -->
+		<?php endwhile; ?>
+
+		<div class="alignleft"><?php next_posts_link('&laquo; Older Entries') ?></div>
+			<div class="alignright"><?php previous_posts_link('Newer Entries &raquo;') ?></div>	
+
+<?php else : ?>
+
+		<h2>Not Found</h2>
+		<p>Sorry, but you are looking for something that isn't here.</p>
+
+	<?php endif; ?>
+</div>
+<!-- nomove sidebar -->
+<div class="nomove"> 
+<ul>
+<li><a href="<?php bloginfo('rss2_url'); ?>"> RSS Entries</a></li>
+<li><a href="<?php bloginfo('comments_rss2_url'); ?>" class="feed"> RSS Comments</a></li>
+</ul>
+
+<div id="search">
+		<form id="searchform" method="get" action="<?php bloginfo('url'); ?>/">
+			<fieldset>
+				<input type="text" name="s" id="s" size="15" value="Search: Type and Enter" onblur="if (this.value == '') {this.value = 'Search: Type and Enter';}" onfocus="if (this.value == 'Search: Type and Enter') {this.value = '';}"/>
+				<input type="submit" id="x" value="Search" />
+			</fieldset>
+		</form>
+	</div>
+</div>
+<?php get_sidebar(); ?>
+<?php get_footer(); ?>
