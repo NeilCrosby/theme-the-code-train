@@ -9,18 +9,18 @@
 <p class="showtags"><?php if (function_exists('the_tags')) the_tags(__('Tags: ','ml'), ', ', '<br/>'); ?></p>
 <div style="clear: both;"> </div>
 </div><br /><br />
-	<!-- end content -->
-	<?php comments_template(); ?>
-		<?php endwhile; ?>
+    <!-- end content -->
+    <?php comments_template(); ?>
+        <?php endwhile; ?>
 
-			
+            
 
 <?php else : ?>
 
-		<h2>Not Found</h2>
-		<p>Sorry, but you are looking for something that isn't here.</p>
+        <h2>Not Found</h2>
+        <p>Sorry, but you are looking for something that isn't here.</p>
 
-	<?php endif; ?>
+    <?php endif; ?>
 </div>
 
 <!-- nomove sidebar -->
@@ -31,13 +31,13 @@
 </ul>
 
 <div id="search">
-		<form id="searchform" method="get" action="<?php bloginfo('url'); ?>/">
-			<fieldset>
-				<input type="text" name="s" id="s" size="15" value="Search: Type and Enter" onblur="if (this.value == '') {this.value = 'Search: Type and Enter';}" onfocus="if (this.value == 'Search: Type and Enter') {this.value = '';}"/>
-				<input type="submit" id="x" value="Search" />
-			</fieldset>
-		</form>
-	</div>
+        <form id="searchform" method="get" action="<?php bloginfo('url'); ?>/">
+            <fieldset>
+                <input type="text" name="s" id="s" size="15" value="Search: Type and Enter" onblur="if (this.value == '') {this.value = 'Search: Type and Enter';}" onfocus="if (this.value == 'Search: Type and Enter') {this.value = '';}"/>
+                <input type="submit" id="x" value="Search" />
+            </fieldset>
+        </form>
+    </div>
 </div>
 <?php get_sidebar(); ?>
 

@@ -25,10 +25,10 @@
 <h2><?php bloginfo('description'); ?></h2>
 <!-- start menu -->
 <div id="menu">
-	<ul>
-           <?php wp_list_pages('title_li=&depth=1'); ?>
-           <li><a href="<?php echo get_option('home'); ?>">Home</a></li>
-	</ul>
+    <ul>
+        <?php wp_list_pages('title_li=&depth=1'); ?>
+        <li><a href="<?php echo get_option('home'); ?>">Home</a></li>
+    </ul>
 </div>
 <!-- end menu -->
 

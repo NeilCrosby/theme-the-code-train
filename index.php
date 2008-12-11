@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 
-
 <div class="left"> 
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -13,18 +12,18 @@
 <div style="clear: both;"> </div>
 </div><br /><br />
 
-	<!-- end content -->
-		<?php endwhile; ?>
+    <!-- end content -->
+        <?php endwhile; ?>
 
-			<div class="alignleft"><?php next_posts_link('&laquo; Older Entries') ?></div>
-			<div class="alignright"><?php previous_posts_link('Newer Entries &raquo;') ?></div>
+            <div class="alignleft"><?php next_posts_link('&laquo; Older Entries') ?></div>
+            <div class="alignright"><?php previous_posts_link('Newer Entries &raquo;') ?></div>
 
 <?php else : ?>
 
-		<h2>Not Found</h2>
-		<p>Sorry, but you are looking for something that isn't here.</p>
+        <h2>Not Found</h2>
+        <p>Sorry, but you are looking for something that isn't here.</p>
 
-	<?php endif; ?> 
+    <?php endif; ?> 
 
 </div>
 <!-- nomove sidebar -->
@@ -35,13 +34,13 @@
 </ul>
 
 <div id="search">
-		<form id="searchform" method="get" action="<?php bloginfo('url'); ?>/">
-			<fieldset>
-				<input type="text" name="s" id="s" size="15" value="Search: Type and Enter" onblur="if (this.value == '') {this.value = 'Search: Type and Enter';}" onfocus="if (this.value == 'Search: Type and Enter') {this.value = '';}"/>
-				<input type="submit" id="x" value="Search" />
-			</fieldset>
-		</form>
-	</div>
-</div>	
+        <form id="searchform" method="get" action="<?php bloginfo('url'); ?>/">
+            <fieldset>
+                <input type="text" name="s" id="s" size="15" value="Search: Type and Enter" onblur="if (this.value == '') {this.value = 'Search: Type and Enter';}" onfocus="if (this.value == 'Search: Type and Enter') {this.value = '';}"/>
+                <input type="submit" id="x" value="Search" />
+            </fieldset>
+        </form>
+    </div>
+</div>  
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
