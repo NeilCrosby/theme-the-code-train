@@ -21,7 +21,7 @@
 <div id="wrap">
 
 <div id="header">
-<h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1><br />
+<h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
 <h2><?php bloginfo('description'); ?></h2>
 <!-- start menu -->
 <div id="menu">

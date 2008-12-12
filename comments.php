@@ -30,7 +30,6 @@ $oddcomment = 'class="alt" ';
                 <?php if ($comment->comment_approved == '0') : ?>
                     <em>Your comment is awaiting moderation.</em>
                 <?php endif; ?>
-                <br />
 
                 <small class="commentmetadata"><a href="#comment-<?php comment_ID() ?>" title=""><?php comment_date('F jS, Y') ?> at <?php comment_time() ?></a> <?php edit_comment_link('edit','&nbsp;&nbsp;',''); ?></small>
 
@@ -97,7 +96,7 @@ $oddcomment = 'class="alt" ';
         <!--<p><small><strong>XHTML:</strong> You can use these tags: <code><?php echo allowed_tags(); ?></code></small></p>-->
 
         <p><textarea name="comment" id="comment" cols="50%" rows="10" tabindex="4"></textarea></p>
-        <br /><p><input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" />
+        <p><input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" />
             <input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />
         </p>
         <?php do_action('comment_form', $post->ID); ?>

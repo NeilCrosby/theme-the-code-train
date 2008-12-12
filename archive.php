@@ -23,14 +23,13 @@
         <?php while (have_posts()) : the_post(); ?>
 
             <h2>* <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-            <p>Posted on <?php the_time('F jS, Y') ?> by <?php the_author() ?>. Filed under <strong><?php the_category(', ') ?></strong>.</p><br />
+            <p>Posted on <?php the_time('F jS, Y') ?> by <?php the_author() ?>. Filed under <strong><?php the_category(', ') ?></strong>.</p>
             <div class="articles">
                 <?php the_excerpt(); ?>
                 <p><a href="<?php the_permalink() ?>" rel="bookmark">Continue reading...</a></p>
                 <p class="showtags"><?php if (function_exists('the_tags')) the_tags(__('Tags: ','ml'), ', ', ''); ?>.</p><div class="count">&nbsp;&nbsp;&nbsp; <?php comments_popup_link('No Comments', '<span>(1)</span> Comment', '<span>(%)</span> Comments'); ?></div>
                 <div style="clear: both;"> </div>
             </div>
-            <br /><br />
             <!-- end content -->
         <?php endwhile; ?>
 
