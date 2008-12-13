@@ -16,8 +16,9 @@
     <div id="search">
         <form id="searchform" method="get" action="<?php bloginfo('url'); ?>/">
             <fieldset>
-                <input type="text" name="s" id="s" size="15" value="Type and Enter" onblur="if (this.value == '') {this.value = 'Type and Enter';}" onfocus="if (this.value == 'Type and Enter') {this.value = '';}"/>
-                <input type="submit" id="x" value="Search" />
+                <legend>Search:</legend>
+                <input type="text" name="s" id="s" size="15" value="Type and Enter" onblur="if (this.value == '') {this.value = 'Type and Enter';}" onfocus="if (this.value == 'Type and Enter') {this.value = '';}">
+                <input type="submit" id="x" value="Search">
             </fieldset>
         </form>
     </div>
