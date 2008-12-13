@@ -14,7 +14,7 @@
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>">
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
-<!-- TODO make wp_head output HTML 4.01 Strict <?php wp_head(); ?> -->
+<?php wp_head(); ?>
 </head>
 <body>
 
