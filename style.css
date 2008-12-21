@@ -17,8 +17,8 @@ body {
     background: #fff;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
-    line-height: 18px;
-    color: #333333;;
+    line-height: 1.5;
+    color: #333;
 }
 
 p {
@@ -32,7 +32,7 @@ img {
 }
 
 a { 
-    color: #878C8D; 
+    color: #878c8d; 
     text-decoration: none; 
 }
 
@@ -83,6 +83,7 @@ img.alignleft {
 #header { 
     height: 150px;
     border-bottom: 1px solid #bbb;
+    line-height: 1;
 }
 
 #header h1 {
@@ -90,7 +91,6 @@ img.alignleft {
     font-weight: 100;
     font-family: Arial, Helvetica, sans-serif;
     padding: 55px 0 5px 0;
-    margin-bottom: 0.4em;
 }
 
 #header h1 a {
@@ -109,7 +109,7 @@ img.alignleft {
     font-weight: 100;
     padding: 0 0 0 0;
     letter-spacing: -1px;
-    line-height: 12px;
+    line-height: .63;
 }
 
 /* Menu */
@@ -171,9 +171,8 @@ img.alignleft {
 }
 
 #content .showtags {
-    background: #FFFFFF;
+    background: #fff;
     padding-left: 5px;
-    line-height: 20px;
     border-bottom: 1px solid #bbb;
     border-top: 1px dashed #bbb;
 }
@@ -245,7 +244,7 @@ img.alignleft {
     height: 30px;
     font-size: 15px;
     color: #000;
-    line-height: 30px;
+    line-height: 2;
     text-decoration: underline;
 }
 
@@ -275,7 +274,7 @@ img.alignleft {
     height: 30px;
     font-size: 15px;
     color: #000;
-    line-height: 30px;
+    line-height: 2;
 }
 
 .nomove a { 
@@ -317,7 +316,7 @@ img.alignleft {
     background: none;
     border: none;
     font: normal 10px Arial, Helvetica, sans-serif;
-    color: #878C8D;
+    color: #878c8d;
 }
 
 #search br {
