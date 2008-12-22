@@ -189,6 +189,10 @@ img.alignleft {
     background: #bbb; 
 }
 
+.commentmetadata {
+    font-size: 75%;
+}
+
 .left {
     width: 568px;
     float: left;
