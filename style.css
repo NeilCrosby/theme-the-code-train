@@ -333,11 +333,16 @@ blockquote {
     border-left: 5px solid #bbb;
 }
 
-#avatar {
+.avatar {
     float: right;
 }
 
-#spacer {
+.commentlist li {
     padding-top: 10px;
     border-bottom: 1px #bbb dashed;
+}    
+
+.commentlist li li {
+        padding-top: 0;
+        border-bottom: none;
 }

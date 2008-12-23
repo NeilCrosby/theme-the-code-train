@@ -24,8 +24,8 @@ $oddcomment = 'class="alt" ';
 
         <?php foreach ($comments as $comment) : ?>
 
-            <div id="spacer"><li <?php echo $oddcomment; ?>id="comment-<?php comment_ID() ?>">
-                <div id="avatar"><?php if(function_exists('get_avatar')){ echo get_avatar($comment, '34'); } ?></div>
+            <li <?php echo $oddcomment; ?>id="comment-<?php comment_ID() ?>">
+                <div class="avatar"><?php if(function_exists('get_avatar')){ echo get_avatar($comment, '34'); } ?></div>
                 <strong><cite><?php comment_author_link() ?></cite> Says:</strong>
                 <?php if ($comment->comment_approved == '0') : ?>
                     <em>Your comment is awaiting moderation.</em>
@@ -35,7 +35,7 @@ $oddcomment = 'class="alt" ';
 
                 <?php comment_text() ?>
 
-            </li></div>
+            </li>
 
         <?php
         /* Changes every other comment to a different class */
