@@ -60,7 +60,7 @@ $oddcomment = 'class="alt" ';
 
 <p>
 <?php if ($post->ping_status == "open") { ?>
-    <span><strong><a href="<?php trackback_url(display); ?>"><?php _e('Trackback URI', 'ml'); ?> </strong></a></span> |
+    <span><strong><a href="<?php trackback_url(display); ?>"><?php _e('Trackback URI', 'ml'); ?> </a></strong></span> |
 <?php } ?>
 <?php if ($post-> comment_status == "open") {?>
     <span><strong><?php comments_rss_link(__('Comments RSS', 'ml')); ?></strong></span>
@@ -93,7 +93,7 @@ $oddcomment = 'class="alt" ';
 
         <?php endif; ?>
 
-        <p><textarea name="comment" id="comment" cols="50%" rows="10" tabindex="4"></textarea></p>
+        <p><textarea name="comment" id="comment" cols="50" rows="10" tabindex="4"></textarea></p>
         <p><input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment">
             <input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>">
         </p>
