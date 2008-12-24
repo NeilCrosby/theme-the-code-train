@@ -22,9 +22,8 @@ body {
 }
 
 p {
-    margin: 0;
+    margin: 5px 0 0 0;
     padding: 5px;
-    margin-top: 5px;
 }
 
 img { 
@@ -107,7 +106,7 @@ img.alignleft {
     color: #555;
     font-size: 19px;
     font-weight: 100;
-    padding: 0 0 0 0;
+    padding: 0;
     letter-spacing: -1px;
     line-height: .63;
 }
@@ -134,12 +133,12 @@ img.alignleft {
 }
 
 #menu a {
-    display: block;
     margin: 6px 4px 6px 2px;
     padding: 1px 10px;
     text-decoration: none;
     font-size: 1em;
     float: right;
+    display: inline; /* For the lovely IE doubled float-margin bug */
     font-weight: normal;
     color: #000;
     background: #fff;
@@ -203,7 +202,7 @@ img.alignleft {
     color: #000;
     font-size: 22px;
     font-weight: 100;
-    padding : 15px 0 15px 0;
+    padding : 15px 0;
 }
 
 .left h2 a {
