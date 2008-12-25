@@ -40,38 +40,18 @@ a:hover {
     color : #bbb; 
 }
 
-img.centered {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.left .nav-timeline {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-img.alignright {
-    padding: 4px;
-    margin: 0 0 2px 4px;
-    display: inline;
-}
-
-img.alignleft {
-    padding: 4px;
-    margin: 0 4px 2px 0;
-    display: inline;
-}
-
-.alignright {
-    float: right;
-}
-
-.alignleft {
+.left .nav-timeline .prev {
     float: left;
 }
-.aligncenter {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-.center {
-    text-align: center;
+
+.left .nav-timeline .next {
+    float: right;
 }
 
 #wrap {

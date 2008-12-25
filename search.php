@@ -17,8 +17,10 @@
     <!-- end content -->
         <?php endwhile; ?>
 
-            <div class="alignleft"><?php next_posts_link('&laquo; Older Entries') ?></div>
-            <div class="alignright"><?php previous_posts_link('Newer Entries &raquo;') ?></div>
+        <ul class="nav-timeline">
+            <li class="prev"><?php next_posts_link('&laquo; Older Entries') ?></li>
+            <li class="next"><?php previous_posts_link('Newer Entries &raquo;') ?></li>
+        </ul>
 
     <?php else : ?>
 
