@@ -1,3 +1,0 @@
-frontend-test-suite:
-  repo: git://github.com/NeilCrosby/frontend-test-suite.git 
-  path: externals
