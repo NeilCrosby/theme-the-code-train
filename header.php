@@ -21,8 +21,12 @@
 <div id="wrap">
 
 <div id="header">
-<h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
-<h2><?php bloginfo('description'); ?></h2>
+<?php if (is_single()) { ?>
+    <p class="bloginfo_name"><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></p>
+<?php } else { ?>
+    <h1 class="bloginfo_name"><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
+<?php } ?>
+<p class="bloginfo_title"><?php bloginfo('description'); ?></p>
 <!-- start menu -->
 <div id="menu">
     <ul>

@@ -65,24 +65,24 @@ a:hover {
     line-height: 1;
 }
 
-#header h1 {
+#header .bloginfo_name {
     font-size: 50px;
     font-weight: 100;
     font-family: Arial, Helvetica, sans-serif;
     padding: 55px 0 5px 0;
 }
 
-#header h1 a {
+#header .bloginfo_name a {
     color: #000;
     text-decoration: none;
 }
 
-#header h1 a:hover {
+#header .bloginfo_name a:hover {
     color: #ccc;
     text-decoration: underline;
 }
 
-#header h2 {
+#header .bloginfo_title {
     color: #555;
     font-size: 19px;
     font-weight: 100;
