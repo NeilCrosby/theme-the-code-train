@@ -6,15 +6,19 @@
     <h2>Search Results</h2>
     <p>You searched for "<?php the_search_query() ?>". This is what we found:</p>
 
+    <ul class="entries">
     <?php while (have_posts()) : the_post(); ?>
-        <h2>* <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-        <p>Posted on <?php the_time('F jS, Y') ?> by <?php the_author() ?>. Filed under <strong><?php the_category(', ') ?></strong>.</p>
-        <div class="articles"></div>
-        <p class="showtags"><?php if (function_exists('the_tags')) the_tags(__('Tags: ','ml'), ', ', ''); ?>.</p>
-        <div class="count">&nbsp;&nbsp;&nbsp; <?php comments_popup_link('No Comments', '<span>(1)</span> Comment', '<span>(%)</span> Comments'); ?></div>
-        <div style="clear: both;"> </div>
-        <!-- end content -->
+        <li>
+            <h2><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+            <p>
+                Posted on <?php the_time('F jS, Y') ?> by <?php the_author() ?>. 
+                Filed under <strong><?php the_category(', ') ?></strong>.
+            </p>
+            <p class="showtags"><?php if (function_exists('the_tags')) the_tags(__('Tags: ','ml'), ', ', ''); ?>.</p>
+            <div class="count"><?php comments_popup_link('No Comments', '1 Comment', '% Comments'); ?></div>
+        </li>
     <?php endwhile; ?>
+    </ul>
 
     <ul class="nav-timeline">
         <li class="prev"><?php next_posts_link('&laquo; Older Entries') ?></li>

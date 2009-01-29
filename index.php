@@ -2,8 +2,11 @@
 
 <div class="left"> 
 
+<ul class="entries">
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-<h2>* <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+    <li>
+
+<h2><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 <p>Posted on <strong><?php the_time('F jS, Y') ?></strong> by <strong><?php the_author() ?></strong>. Filed under <strong><?php the_category(', ') ?></strong>.</p>
 <div class="articles">
 <?php the_excerpt(); ?>
@@ -13,7 +16,9 @@
 </div>
 
     <!-- end content -->
-        <?php endwhile; ?>
+    </li>
+<?php endwhile; ?>
+</ul>
 
         <ul class="nav-timeline">
             <li class="prev"><?php next_posts_link('&laquo; Older Entries') ?></li>
