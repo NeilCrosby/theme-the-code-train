@@ -163,9 +163,7 @@ a:hover {
 }
 
 #content a img:hover {  
-    padding: 1px; 
-    border: 2px solid #bbb; 
-    background: #bbb; 
+    background: transparent; 
 }
 
 .commentmetadata {
@@ -268,6 +266,7 @@ a:hover {
 .nomove a:hover {
     text-decoration: underline;
     color: #bbb;
+    background: transparent;
 }
 
 #footer {
