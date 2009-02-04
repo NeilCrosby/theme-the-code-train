@@ -9,8 +9,8 @@
 <div class="nomove"> 
     <h2>RSS feeds:</h2>
     <ul>
-        <li><a href="<?php bloginfo('rss2_url'); ?>"><img src="/wp-content/themes/theme-the-code-train/images/feed-icon-140x140.png" alt="RSS Entries"></a></li>
-        <li><a href="<?php bloginfo('comments_rss2_url'); ?>" class="feed"> RSS Comments</a></li>
+        <li><a class="rss_primary" href="<?php bloginfo('rss2_url'); ?>"><img src="/wp-content/themes/theme-the-code-train/images/feed-icon-140x140.png" alt="RSS Entries"></a></li>
+        <li><a class="rss_secondary" href="<?php bloginfo('comments_rss2_url'); ?>" class="feed">RSS For Comments</a></li>
     </ul>
     <h2>Search:</h2>
     <div id="search">
