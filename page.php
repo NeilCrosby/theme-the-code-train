@@ -23,12 +23,9 @@
 <!-- nomove sidebar -->
 
 <div class="nomove"> 
-<ul>
-    <li><a class="rss_primary" href="<?php bloginfo('rss2_url'); ?>"><img src="/wp-content/themes/theme-the-code-train/images/feed-icon-140x140.png" alt="RSS Entries"></a></li>
-    <li><a class="rss_secondary" href="<?php bloginfo('comments_rss2_url'); ?>" class="feed">RSS for Comments</a></li>
-</ul>
+    <?php tct_widget_rss(); ?>
 
-<div id="search">
+    <div id="search">
         <form id="searchform" method="get" action="<?php bloginfo('url'); ?>/">
             <fieldset>
                 <legend>Search:</legend>

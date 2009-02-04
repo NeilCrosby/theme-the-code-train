@@ -7,6 +7,17 @@ if ( function_exists('register_sidebar') )
     'after_title' => '</h2>',
 ));
 
+function tct_widget_rss() {
+?>
+    <h2>RSS feeds:</h2>
+    <ul>
+        <li><a class="rss_primary" href="<?php bloginfo('rss2_url'); ?>"><img src="/wp-content/themes/theme-the-code-train/images/feed-icon-140x140.png" alt="RSS Entries"></a></li>
+        <li><a class="rss_secondary" href="<?php bloginfo('comments_rss2_url'); ?>">RSS For Comments</a></li>
+    </ul>
+<?php
+}
+
+// Everything under here is to HTML4.01 Strict-ise WordPress.
 remove_action('wp_head', 'rsd_link');
 add_action(   'wp_head', 'tct_rsd_link');
 remove_action('wp_head', 'wlwmanifest_link');
