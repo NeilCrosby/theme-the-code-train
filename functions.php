@@ -1,20 +1,58 @@
 <?php
 if ( function_exists('register_sidebar') )
     register_sidebar(array(
-    'before_widget' => '',
-    'after_widget' => '',
+    'before_widget' => '<li>',
+    'after_widget' => '</li>',
     'before_title' => '<h2>',
     'after_title' => '</h2>',
 ));
 
-function tct_widget_rss() {
+if ( function_exists('register_sidebar_widget') ) {
+    register_sidebar_widget(__("This Blog's RSS"), 'tct_widget_rss');
+#    register_sidebar_widget(__('Search'), 'widget_mytheme_search');
+#    register_sidebar_widget(__('Next / Prev Posts'), 'widget_mytheme_next_prev');
+#    register_sidebar_widget(__('Recent Posts'), 'widget_mytheme_recent');
+#    register_sidebar_widget(__('Archives'), 'widget_mytheme_monthly');
+#    register_sidebar_widget(__('Meta'), 'widget_mytheme_meta');
+}
+
+function tct_widget_rss($args) {
+    extract($args);
+
+    echo $before_widget;
+    
+    echo $before_title."RSS feeds".$after_title;
+    
 ?>
-    <h2>RSS feeds:</h2>
     <ul>
         <li><a class="rss_primary" href="<?php bloginfo('rss2_url'); ?>"><img src="/wp-content/themes/theme-the-code-train/images/feed-icon-140x140.png" alt="RSS Entries"></a></li>
         <li><a class="rss_secondary" href="<?php bloginfo('comments_rss2_url'); ?>">RSS For Comments</a></li>
     </ul>
 <?php
+
+    echo $after_widget;
+}
+
+function tct_widget_search($args) {
+    extract($args);
+
+    echo $before_widget;
+    
+    echo $before_title."Search".$after_title;
+    
+?>
+    <div id="search">
+        <form id="searchform" method="get" action="<?php bloginfo('url'); ?>/">
+            <fieldset>
+                <legend>Search:</legend>
+                <input type="text" name="s" id="s" size="15" value="Type and Enter" onblur="if (this.value == '') {this.value = 'Type and Enter';}" onfocus="if (this.value == 'Type and Enter') {this.value = '';}">
+                <input type="submit" id="x" value="Search">
+            </fieldset>
+        </form>
+    </div>
+<?php
+
+    echo $after_widget;
 }
 
 // Everything under here is to HTML4.01 Strict-ise WordPress.

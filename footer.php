@@ -1,3 +1,4 @@
+</div>
 
 <div id="footer"> 
 Theme by <a href="http://helemaalniet.nl">Helemaal Niet!</a>, Powered by <a href="http://wordpress.org">WordPress</a>

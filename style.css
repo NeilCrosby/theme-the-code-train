@@ -207,6 +207,10 @@ a:hover {
     border-left: 1px solid #bbb;
 }
 
+.right li {
+    list-style: none;
+}
+
 .right ul {
     list-style-type: none;
     padding: 5px 10px 10px 10px;
@@ -234,35 +238,8 @@ a:hover {
     text-decoration: underline;
 }
 
-.nomove {
-    width: 160px;
-    float: right;
-    padding: 10px;
-    border-left: 1px solid #bbb;
-}
-
-.nomove ul {
-    list-style-type: none;
-    padding: 5px 10px 10px 10px;
-}
-
-.nomove h2 {
-    height: 30px;
-    font-size: 15px;
-    color: #000;
-    line-height: 2;
-}
-
-.nomove a { 
-    color: #000;
-}
-
-.nomove a:hover {
-    text-decoration: underline;
-    background-color: transparent;
-}
-
 #footer {
+    clear: both;
     border-top: 1px solid #bbb;
     text-align: center;
     color: #333;
@@ -274,8 +251,6 @@ a:hover {
 /* Search */
 
 #search {
-    width: 150px;
-    height: 25px;
     background: #fff;
     border: none;
 }

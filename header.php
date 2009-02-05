@@ -20,21 +20,21 @@
 
 <div id="wrap">
 
-<div id="header">
-<?php if (is_single()) { ?>
-    <p class="bloginfo_name"><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></p>
-<?php } else { ?>
-    <h1 class="bloginfo_name"><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
-<?php } ?>
-<p class="bloginfo_title"><?php bloginfo('description'); ?></p>
-<!-- start menu -->
-<div id="menu">
-    <ul>
-        <?php wp_list_pages('title_li=&depth=1'); ?>
-        <li><a href="<?php echo get_option('home'); ?>">Home</a></li>
-    </ul>
-</div>
-<!-- end menu -->
+    <div id="header">
+        <?php if (is_single()) { ?>
+            <p class="bloginfo_name"><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></p>
+        <?php } else { ?>
+            <h1 class="bloginfo_name"><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
+        <?php } ?>
+        <p class="bloginfo_title"><?php bloginfo('description'); ?></p>
 
-</div>
-<div id="content">
+        <!-- start menu -->
+        <div id="menu">
+            <ul>
+                <?php wp_list_pages('title_li=&depth=1'); ?>
+                <li><a href="<?php echo get_option('home'); ?>">Home</a></li>
+            </ul>
+        </div>
+        <!-- end menu -->
+    </div>
+    <div id="content">
