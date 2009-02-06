@@ -2,7 +2,7 @@
 
 <div id="yui-main"><div class="yui-b">
 
-<ul class="entries">
+<ol class="entries">
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
     <li>
 
