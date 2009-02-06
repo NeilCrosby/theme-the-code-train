@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="left"> 
+<div id="yui-main"><div class="yui-b">
 
 <ul class="entries">
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -32,7 +32,7 @@
 
     <?php endif; ?> 
 
-</div>
+</div></div>
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

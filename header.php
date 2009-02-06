@@ -16,11 +16,11 @@
 
 <?php wp_head(); ?>
 </head>
-<body id="doc2">
+<body>
 
-<div id="wrap">
+<div id="doc2" class="yui-t5">
 
-    <div id="header">
+    <div id="hd">
         <?php if (is_single()) { ?>
             <p class="bloginfo_name"><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></p>
         <?php } else { ?>
@@ -31,10 +31,10 @@
         <!-- start menu -->
         <div id="menu">
             <ul>
-                <?php wp_list_pages('title_li=&depth=1'); ?>
                 <li><a href="<?php echo get_option('home'); ?>">Home</a></li>
+                <?php wp_list_pages('title_li=&depth=1'); ?>
             </ul>
         </div>
         <!-- end menu -->
     </div>
-    <div id="content">
+    <div id="bd">

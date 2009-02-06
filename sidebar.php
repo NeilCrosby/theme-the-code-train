@@ -1,5 +1,5 @@
-
-<ul class="right">
+<div class="yui-b" id="sidebar">
+<ul>
     <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) : ?>
 
     <?php
@@ -40,3 +40,4 @@
 
     <?php endif; ?>
 </ul>
+</div>

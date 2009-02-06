@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div class="left"> 
+<div id="yui-main"><div class="yui-b"> 
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 <h2>* <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
@@ -19,7 +19,7 @@
         <p>Sorry, but you are looking for something that isn't here.</p>
 
     <?php endif; ?>
-</div>
+</div></div>
 
 <?php get_sidebar(); ?>
 

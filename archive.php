@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div class="left">
+<div id="yui-main"><div class="yui-b">
 
     <?php if (have_posts()) : ?>
 
@@ -44,7 +44,7 @@
         <p>Sorry, but you are looking for something that isn't here.</p>
 
     <?php endif; ?>
-</div>
+</div></div>
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
