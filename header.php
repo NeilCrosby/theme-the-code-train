@@ -16,7 +16,7 @@
 
 <?php wp_head(); ?>
 </head>
-<body>
+<body id="doc2">
 
 <div id="wrap">
 
