@@ -1,7 +1,7 @@
 <?php
 if ( function_exists('register_sidebar') )
     register_sidebar(array(
-    'before_widget' => '<li>',
+    'before_widget' => '<li id="%1$s" class="widget %2$s">',
     'after_widget' => '</li>',
     'before_title' => '<h2>',
     'after_title' => '</h2>',
@@ -18,6 +18,12 @@ if ( function_exists('register_sidebar_widget') ) {
 
 function tct_widget_rss($args) {
     extract($args);
+    
+    $empty_id = 'id=""';
+    $id_pos = mb_strpos($before_widget, $empty_id);
+    if ( $id_pos > 0 ) {
+        $before_widget = mb_substr($before_widget, 0, $id_pos) . mb_substr($before_widget, $id_pos + mb_strlen($empty_id));
+    }
 
     echo $before_widget;
     
@@ -35,6 +41,12 @@ function tct_widget_rss($args) {
 
 function tct_widget_search($args) {
     extract($args);
+
+    $empty_id = 'id=""';
+    $id_pos = mb_strpos($before_widget, $empty_id);
+    if ( $id_pos > 0 ) {
+        $before_widget = mb_substr($before_widget, 0, $id_pos) . mb_substr($before_widget, $id_pos + mb_strlen($empty_id));
+    }
 
     echo $before_widget;
     
