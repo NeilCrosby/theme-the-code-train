@@ -18,7 +18,7 @@
     <!-- end content -->
     </li>
 <?php endwhile; ?>
-</ul>
+</ol>
 
         <ul class="nav-timeline">
             <li class="prev"><?php next_posts_link('&laquo; Older Entries') ?></li>
