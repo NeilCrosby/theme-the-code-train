@@ -39,17 +39,17 @@ a:hover {
     text-decoration: underline; 
 }
 
-.left .nav-timeline {
+.nav-timeline {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.left .nav-timeline .prev {
+.nav-timeline .prev {
     float: left;
 }
 
-.left .nav-timeline .next {
+.nav-timeline .next {
     float: right;
 }
 
@@ -136,32 +136,19 @@ a:hover {
     font-size: 75%;
 }
 
-.left {
-    width: 568px;
-    float: left;
-    text-align: justify;
-}
-
-.left h2 {
+#yui-main h2 {
     color: #000;
-    font-size: 22px;
+    font-size: 167%;
     font-weight: 100;
     padding : 15px 0;
 }
 
-.left h2 a {
+#yui-main h2 a {
     color: #000;
 }
 
-.left h2 a:hover {
-    text-decoration: underline;
-}
-
-.left ul {
-    padding-left: 3em;
-}
-
-.left ol {
+#yui-main ol ol,
+#yui-main ul {
     padding-left: 3em;
 }
 
@@ -188,7 +175,7 @@ a:hover {
 }
 
 #sidebar h2 {
-    font-size: 15px;
+    font-size: 116%;
     color: #000;
     line-height: 2;
     text-decoration: underline;
@@ -209,7 +196,7 @@ a:hover {
     border-top: 1px solid #bbb;
     text-align: center;
     color: #333;
-    font-size: 11px;
+    font-size: 85%;
     padding: 0 0 10px 0;
     margin-top: 10px;
 }
