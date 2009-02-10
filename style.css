@@ -205,31 +205,6 @@ a:hover {
     margin-top: 10px;
 }
 
-/* Search */
-
-#search {
-    background: #fff;
-    border: none;
-}
-
-#search #x {
-    display: none;
-}
-
-#search #s {
-    padding: 6px 10px 5px 10px;
-    width: 127px;
-    height: auto;
-    background: none;
-    border: none;
-    font: normal 10px Arial, Helvetica, sans-serif;
-    color: #878c8d;
-}
-
-#search br {
-    display: none;
-}
-
 blockquote {
     margin: 0 0 0 1.5em;
     padding-left: 1em;
