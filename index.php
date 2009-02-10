@@ -11,11 +11,21 @@
             
             <li class="entry">
                 <h2><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-                <p>Posted on <strong><?php the_time('F jS, Y') ?></strong> by <strong><?php the_author() ?></strong>. Filed under <strong><?php the_category(', ') ?></strong>.</p>
+                <p>
+                    Posted on <strong><?php the_time('F jS, Y') ?></strong> by <strong><?php the_author() ?></strong>. 
+                    Filed under <strong><?php the_category(', ') ?></strong>.
+                </p>
                 <div class="articles">
                     <?php the_excerpt(); ?>
-                    <p><a href="<?php the_permalink() ?>" rel="bookmark">Continue reading...</a></p>
-                    <p class="showtags"><?php if (function_exists('the_tags')) the_tags(__('Tags: ','ml'), ', ', ''); ?>.</p><div class="count"><?php comments_popup_link('No Comments', '<span>(1)</span> Comment', '<span>(%)</span> Comments'); ?></div>
+                    <p>
+                        <a href="<?php the_permalink() ?>" rel="bookmark">Continue reading...</a>
+                    </p>
+                    <p class="showtags">
+                        <?php if (function_exists('the_tags')) the_tags(__('Tags: ','ml'), ', ', ''); ?>.
+                    </p>
+                    <div class="count">
+                        <?php comments_popup_link('No Comments', '<span>(1)</span> Comment', '<span>(%)</span> Comments'); ?>
+                    </div>
                     <div style="clear: both;"> </div>
                 </div>
             </li>
