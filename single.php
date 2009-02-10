@@ -3,7 +3,7 @@
 
 <div class="entry">
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-<h2>* <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+<h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
 <p>Posted on <?php the_time('F jS, Y') ?> by <?php the_author() ?>. Filed under <strong><?php the_category(', ') ?></strong>.</p>
 <div class="articles">
 <?php the_content('Read the rest of this entry &raquo;'); ?>

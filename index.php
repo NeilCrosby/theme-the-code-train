@@ -11,7 +11,7 @@
 <div class="articles">
 <?php the_excerpt(); ?>
 <p><a href="<?php the_permalink() ?>" rel="bookmark">Continue reading...</a></p>
-<p class="showtags"><?php if (function_exists('the_tags')) the_tags(__('Tags: ','ml'), ', ', ''); ?>.</p><div class="count">&nbsp;&nbsp;&nbsp; <?php comments_popup_link('No Comments', '<span>(1)</span> Comment', '<span>(%)</span> Comments'); ?></div>
+<p class="showtags"><?php if (function_exists('the_tags')) the_tags(__('Tags: ','ml'), ', ', ''); ?>.</p><div class="count"><?php comments_popup_link('No Comments', '<span>(1)</span> Comment', '<span>(%)</span> Comments'); ?></div>
 <div style="clear: both;"> </div>
 </div>
 

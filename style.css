@@ -119,11 +119,24 @@ a:hover {
     font-size: 116%;
 }
 
-#bd .showtags {
-    background: #fff;
-    padding-left: 5px;
+.entry h1,
+.entry h2 {
+    color: #000;
+    font-size: 167%;
+    font-weight: normal;
+    padding : 15px 0;
+}
+
+.entry h1 a,
+.entry h2 a {
+    color: #000;
+}
+
+.entry .showtags {
     border-bottom: 1px solid #bbb;
     border-top: 1px dashed #bbb;
+    margin: 0.5em 0;
+    padding: 0.25em 0;
 }
 
 #bd a img {
@@ -143,7 +156,7 @@ a:hover {
 #yui-main h2 {
     color: #000;
     font-size: 167%;
-    font-weight: 100;
+    font-weight: normal;
     padding : 15px 0;
 }
 
