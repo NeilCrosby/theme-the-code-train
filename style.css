@@ -115,6 +115,10 @@ a:hover {
     border-top: 1px #bbb dashed;
 }
 
+.entry {
+    font-size: 116%;
+}
+
 #bd .showtags {
     background: #fff;
     padding-left: 5px;

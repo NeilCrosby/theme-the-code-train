@@ -4,7 +4,7 @@
 
 <ol class="entries">
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-    <li>
+    <li class="entry">
 
 <h2><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 <p>Posted on <strong><?php the_time('F jS, Y') ?></strong> by <strong><?php the_author() ?></strong>. Filed under <strong><?php the_category(', ') ?></strong>.</p>
