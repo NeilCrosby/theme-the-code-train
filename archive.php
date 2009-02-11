@@ -1,5 +1,6 @@
 <?php get_header(); ?>
-<div id="yui-main"><div class="yui-b">
+<div id="yui-main">
+    <div class="yui-b">
 
     <?php if (have_posts()) : ?>
 
@@ -21,20 +22,32 @@
         <?php } ?>
 
         <ol class="entries">
+            
         <?php while (have_posts()) : the_post(); ?>
 
             <li class="entry">
-            <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-            <p>Posted on <?php the_time('F jS, Y') ?> by <?php the_author() ?>. Filed under <strong><?php the_category(', ') ?></strong>.</p>
-            <div class="articles">
-                <?php the_excerpt(); ?>
-                <p><a href="<?php the_permalink() ?>" rel="bookmark">Continue reading...</a></p>
-                <p class="showtags"><?php if (function_exists('the_tags')) the_tags(__('Tags: ','ml'), ', ', ''); ?>.</p><div class="count">&nbsp;&nbsp;&nbsp; <?php comments_popup_link('No Comments', '<span>(1)</span> Comment', '<span>(%)</span> Comments'); ?></div>
-                <div style="clear: both;"> </div>
-            </div>
-            <!-- end content -->
+                <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+                <p>
+                    Posted on <?php the_time('F jS, Y') ?> by <?php the_author() ?>. 
+                    Filed under <strong><?php the_category(', ') ?></strong>.
+                </p>
+                <div class="articles">
+                    <?php the_excerpt(); ?>
+                    <p>
+                        <a href="<?php the_permalink() ?>" rel="bookmark">Continue reading...</a>
+                    </p>
+                    <p class="showtags">
+                        <?php if (function_exists('the_tags')) the_tags(__('Tags: ','ml'), ', ', ''); ?>.
+                    </p>
+                    <div class="count">
+                        <?php comments_popup_link('No Comments', '<span>(1)</span> Comment', '<span>(%)</span> Comments'); ?>
+                    </div>
+                    <div style="clear: both;"> </div>
+                </div>
             </li>
+
         <?php endwhile; ?>
+
         </ol>
 
         <ul class="nav-timeline">
@@ -48,7 +61,9 @@
         <p>Sorry, but you are looking for something that isn't here.</p>
 
     <?php endif; ?>
-</div></div>
+    
+    </div>
+</div>
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
