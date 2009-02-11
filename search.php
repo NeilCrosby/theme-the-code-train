@@ -6,7 +6,7 @@
     <h2>Search Results</h2>
     <p>You searched for "<?php the_search_query() ?>". This is what we found:</p>
 
-    <ul class="entries">
+    <ol class="entries">
     <?php while (have_posts()) : the_post(); ?>
         <li>
             <h2><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
@@ -18,7 +18,7 @@
             <div class="count"><?php comments_popup_link('No Comments', '1 Comment', '% Comments'); ?></div>
         </li>
     <?php endwhile; ?>
-    </ul>
+    </ol>
 
     <ul class="nav-timeline">
         <li class="prev"><?php next_posts_link('&laquo; Older Entries') ?></li>
