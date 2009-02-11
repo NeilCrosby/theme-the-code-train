@@ -80,11 +80,11 @@ add_action(   'wp_head', 'tct_wp_generator');
 
 
 function tct_rsd_link() {
-	echo '<link rel="EditURI" type="application/rsd+xml" title="RSD" href="' . get_bloginfo('wpurl') . "/xmlrpc.php?rsd\">\n";
+    echo '    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="' . get_bloginfo('wpurl') . "/xmlrpc.php?rsd\">\n";
 }
 
 function tct_wlwmanifest_link() {
-	echo '<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="'
+	echo '    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="'
 		. get_bloginfo('wpurl') . '/wp-includes/wlwmanifest.xml"> ' . "\n";
 }
 
@@ -92,16 +92,18 @@ function tct_locale_stylesheet() {
 	$stylesheet = get_locale_stylesheet_uri();
 	if ( empty($stylesheet) )
 		return;
-	echo '<link rel="stylesheet" href="' . $stylesheet . '" type="text/css" media="screen">';
+	echo '    <link rel="stylesheet" href="' . $stylesheet . '" type="text/css" media="screen">'."\n";
 }
 
 function tct_noindex() {
     // If the blog is not public, tell robots to go away.
-    if ( '0' == get_option('blog_public') )
+    if ( '0' == get_option('blog_public') ) {
         echo "<meta name='robots' content='noindex,nofollow'>\n";
+    }
 }
 
 function tct_wp_generator() {
+    echo '    ';
 	the_generator( apply_filters( 'wp_generator_type', 'html' ) );
 }
 
