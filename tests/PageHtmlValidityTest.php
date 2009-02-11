@@ -43,6 +43,9 @@ class PageHtmlValidityTest extends TheCodeTrainBaseValidatorTestCase {
             array('http://wordpress:8888/?page_id=9'),
             array('http://wordpress:8888/?page_id=10'),
             array('http://wordpress:8888/?page_id=19'),
+            array('http://wordpress:8888/?m=200809'),
+            array('http://wordpress:8888/?s=hgfljch+klFYIUEAYIADYFUADF'),
+            array('http://wordpress:8888/?s=lorem'),
         );
     }
 }
