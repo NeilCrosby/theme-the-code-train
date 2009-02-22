@@ -18,33 +18,35 @@ $oddcomment = 'class="alt" ';
 <!-- You can start editing here. -->
 
 <?php if ($comments) : ?>
-    <h3 id="comments"><?php comments_number('No Responses', 'One Response', '% Responses' );?> to &#8220;<?php the_title(); ?>&#8221;</h3>
+    <div id="comments">
+        <h2><?php comments_number('No Responses', 'One Response', '% Responses' );?> to &#8220;<?php the_title(); ?>&#8221;</h2>
 
-    <ol class="commentlist">
+        <ol class="commentlist">
 
-        <?php foreach ($comments as $comment) : ?>
+            <?php foreach ($comments as $comment) : ?>
 
-            <li <?php echo $oddcomment; ?>id="comment-<?php comment_ID() ?>">
-                <div class="avatar"><?php if(function_exists('get_avatar')){ echo get_avatar($comment, '34'); } ?></div>
-                <strong><cite><?php comment_author_link() ?></cite> Says:</strong>
-                <?php if ($comment->comment_approved == '0') : ?>
-                    <em>Your comment is awaiting moderation.</em>
-                <?php endif; ?>
+                <li <?php echo $oddcomment; ?>id="comment-<?php comment_ID() ?>">
+                    <div class="avatar"><?php if(function_exists('get_avatar')){ echo get_avatar($comment, '34'); } ?></div>
+                    <strong><cite><?php comment_author_link() ?></cite> Says:</strong>
+                    <?php if ($comment->comment_approved == '0') : ?>
+                        <em>Your comment is awaiting moderation.</em>
+                    <?php endif; ?>
 
-                <span class="commentmetadata"><a href="#comment-<?php comment_ID() ?>" title=""><?php comment_date('F jS, Y') ?> at <?php comment_time() ?></a> <?php edit_comment_link('edit','&nbsp;&nbsp;',''); ?></span>
+                    <span class="commentmetadata"><a href="#comment-<?php comment_ID() ?>" title=""><?php comment_date('F jS, Y') ?> at <?php comment_time() ?></a> <?php edit_comment_link('edit','&nbsp;&nbsp;',''); ?></span>
 
-                <?php comment_text() ?>
+                    <?php comment_text() ?>
 
-            </li>
+                </li>
 
-        <?php
-        /* Changes every other comment to a different class */
-        $oddcomment = ( empty( $oddcomment ) ) ? 'class="alt" ' : '';
-        ?>
+            <?php
+            /* Changes every other comment to a different class */
+            $oddcomment = ( empty( $oddcomment ) ) ? 'class="alt" ' : '';
+            ?>
 
-        <?php endforeach; /* end for each comment */ ?>
+            <?php endforeach; /* end for each comment */ ?>
 
-    </ol>
+        </ol>
+    </div>
 
 <?php else : // this is displayed if there are no comments so far ?>
 

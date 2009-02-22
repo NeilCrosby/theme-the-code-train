@@ -40,7 +40,7 @@
                         <?php if (function_exists('the_tags')) the_tags(__('Tags: ','ml'), ', ', ''); ?>.
                     </p>
                     <div class="count">
-                        <?php comments_popup_link('No Comments', '<span>(1)</span> Comment', '<span>(%)</span> Comments'); ?>
+                        <?php comments_popup_link('No Comments', '<span>1</span> Comment', '<span>%</span> Comments'); ?>
                     </div>
                     <div style="clear: both;"> </div>
                 </div>
