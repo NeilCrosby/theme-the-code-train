@@ -1,4 +1,5 @@
 <div class="yui-b" id="sidebar">
+    <h1><?php bloginfo('name'); ?> Meta-Info</h1>
 <ul>
     <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) : ?>
 

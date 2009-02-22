@@ -177,6 +177,11 @@ a:hover {
     border-left: 1px solid #bbb;
 }
 
+#sidebar h1 {
+    text-indent: -9000em;
+    font-size: 1px;
+}
+
 #sidebar li {
     list-style: none;
 }
