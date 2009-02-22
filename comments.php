@@ -12,21 +12,29 @@ if (!empty($post->post_password)) { // if there's a password
 }
 
 /* This variable is for alternating comment background */
-$oddcomment = 'class="alt" ';
+$oddcomment = 'alt';
 ?>
 
 <!-- You can start editing here. -->
 
 <?php if ($comments) : ?>
+<?php
+    $author_email = get_the_author_email();
+?>
+    
     <div id="comments">
         <h2><?php comments_number('No Responses', 'One Response', '% Responses' );?> to &#8220;<?php the_title(); ?>&#8221;</h2>
 
         <ol class="commentlist">
 
             <?php foreach ($comments as $comment) : ?>
+                
+            <?php
+                $author_class = ($author_email == get_comment_author_email()) ? "author_comment" : '';
+            ?>
 
-                <li <?php echo $oddcomment; ?>id="comment-<?php comment_ID() ?>">
-                    <div class="avatar"><?php if(function_exists('get_avatar')){ echo get_avatar($comment, '34'); } ?></div>
+                <li class="<?php echo $author_class.' '.$oddcomment; ?>" id="comment-<?php comment_ID() ?>">
+                    <div class="avatar"><?php if(function_exists('get_avatar')){ echo get_avatar($comment, '48'); } ?></div>
                     <strong><cite><?php comment_author_link() ?></cite> Says:</strong>
                     <?php if ($comment->comment_approved == '0') : ?>
                         <em>Your comment is awaiting moderation.</em>
@@ -40,7 +48,7 @@ $oddcomment = 'class="alt" ';
 
             <?php
             /* Changes every other comment to a different class */
-            $oddcomment = ( empty( $oddcomment ) ) ? 'class="alt" ' : '';
+            $oddcomment = ( empty( $oddcomment ) ) ? 'alt' : '';
             ?>
 
             <?php endforeach; /* end for each comment */ ?>
