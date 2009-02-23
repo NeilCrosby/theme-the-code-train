@@ -33,17 +33,19 @@ $oddcomment = 'alt';
                 $author_class = ($author_email == get_comment_author_email()) ? "author_comment" : '';
             ?>
 
-                <li class="<?php echo $author_class.' '.$oddcomment; ?>" id="comment-<?php comment_ID() ?>">
-                    <div class="avatar"><?php if(function_exists('get_avatar')){ echo get_avatar($comment, '48'); } ?></div>
-                    <strong><cite><?php comment_author_link() ?></cite> Says:</strong>
-                    <?php if ($comment->comment_approved == '0') : ?>
-                        <em>Your comment is awaiting moderation.</em>
-                    <?php endif; ?>
+                <li class="mod <?php echo $author_class.' '.$oddcomment; ?>" id="comment-<?php comment_ID() ?>">
+                    <div class="hd">
+                        <strong><cite><?php comment_author_link() ?></cite> Says:</strong>
+                        <span class="commentmetadata"><a href="#comment-<?php comment_ID() ?>" title=""><?php comment_date('F jS, Y') ?> at <?php comment_time() ?></a> <?php edit_comment_link('edit','&nbsp;&nbsp;',''); ?></span>
+                        <div class="avatar"><?php if(function_exists('get_avatar')){ echo get_avatar($comment, '48'); } ?></div>
+                    </div>
+                    <div class="bd">
+                        <?php if ($comment->comment_approved == '0') : ?>
+                            <em>Your comment is awaiting moderation.</em>
+                        <?php endif; ?>
 
-                    <span class="commentmetadata"><a href="#comment-<?php comment_ID() ?>" title=""><?php comment_date('F jS, Y') ?> at <?php comment_time() ?></a> <?php edit_comment_link('edit','&nbsp;&nbsp;',''); ?></span>
-
-                    <?php comment_text() ?>
-
+                        <?php comment_text() ?>
+                    </div>
                 </li>
 
             <?php

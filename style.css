@@ -242,14 +242,30 @@ blockquote {
     float: right;
 }
 
-.commentlist li {
-    padding-top: 10px;
+.commentlist li.mod {
+    padding: 0 1em 0.5em 1em;
+    margin: 0.5em 0 1em 0;
     border-bottom: 1px #bbb dashed;
+    list-style-position: inside;
+}
+
+.commentlist li.mod .hd,
+.commentlist li.mod .bd {
+    margin-left: 2em;
+}
+
+.commentlist li.mod .hd {
+    margin-top: -1.5em;
+}
+
+.commentlist li.author_comment {
+    padding-top: 0.5em;
+    border: 1px solid #f00;
 }    
 
 .commentlist li li {
-        padding-top: 0;
-        border-bottom: none;
+    padding: 0;
+    border: none;
 }
 
 ul.entries {
