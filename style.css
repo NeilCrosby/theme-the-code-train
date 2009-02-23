@@ -60,8 +60,9 @@ a:hover {
 }
 
 #hd .bloginfo_name {
+    font-family: Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
     font-size: 378%;
-    font-weight: 100;
+    font-weight: bold;
     padding: 55px 0 5px 0;
 }
 
@@ -125,6 +126,7 @@ a:hover {
     font-size: 167%;
     font-weight: normal;
     padding : 15px 0;
+    font-family: Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
 }
 
 .entry h1 a,
@@ -137,6 +139,18 @@ a:hover {
     border-top: 1px dashed #bbb;
     margin: 0.5em 0;
     padding: 0.25em 0;
+}
+
+.entry li {
+    margin: 1em 2em 1em 2em;
+}
+
+.entry ol li {
+    list-style: decimal;
+}
+
+.entry ul li {
+    list-style: disc;
 }
 
 #bd a img {
@@ -162,11 +176,6 @@ a:hover {
 
 #yui-main h2 a {
     color: #000;
-}
-
-#yui-main ol ol,
-#yui-main ul {
-    padding-left: 3em;
 }
 
 .count {
