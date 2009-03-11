@@ -1,6 +1,6 @@
 <?php
 
-require_once('../externals/frontend-test-suite/suite/TheCodeTrainBaseValidatorTestCase.php');
+require_once('../externals/frontend-test-suite/suite/TheCodeTrainHtmlValidatorTestCase.php');
 require_once('../externals/frontend-test-suite/suite/TheCodeTrainHtmlValidator.php');
 
 /**
@@ -8,7 +8,7 @@ require_once('../externals/frontend-test-suite/suite/TheCodeTrainHtmlValidator.p
  * @license Creative Commons Attribution-Share Alike 3.0 Unported 
  *          http://creativecommons.org/licenses/by-sa/3.0/
  **/
-class PageHtmlValidityTest extends TheCodeTrainBaseValidatorTestCase {
+class PageHtmlValidityTest extends TheCodeTrainHtmlValidatorTestCase {
     public function setUp() {
     }
 
