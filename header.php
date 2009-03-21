@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="en">
 <head>
-    <title><?php wp_title('&raquo;',true,'right'); ?> <?php if ( is_single() ) { ?> Blog Archive &raquo; <?php } ?> <?php bloginfo('name'); ?></title>
+    <title><?php wp_title('&raquo;',true,'right'); ?> <?php if ( is_single() ) { ?> Blog Archive &raquo; <?php } ?> <?php bloginfo('name'); ?><?php if (!is_single()) { echo ' - '; bloginfo('description');} ?></title>
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
