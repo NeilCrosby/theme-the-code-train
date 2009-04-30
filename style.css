@@ -246,16 +246,7 @@ blockquote {
     padding: 0 1em 0.5em 1em;
     margin: 0.5em 0 1em 0;
     border-bottom: 1px #bbb dashed;
-    list-style-position: inside;
-}
-
-.commentlist li.mod .hd,
-.commentlist li.mod .bd {
-    margin-left: 2em;
-}
-
-.commentlist li.mod .hd {
-    margin-top: -1.5em;
+    overflow: hidden;
 }
 
 .commentlist li.author_comment {
