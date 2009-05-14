@@ -253,6 +253,7 @@ blockquote {
 }
 
 .avatar {
+    width: 48px;
     float: right;
 }
 
