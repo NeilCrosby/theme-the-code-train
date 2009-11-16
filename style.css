@@ -272,3 +272,12 @@ ul.entries {
     padding: 1em 0 0 16px;
     background: url(images/feed-icon-12x12.png) 0 1.2em no-repeat;
 }
+
+pre {
+    margin: 0.5em 0;
+}
+
+.sidenote {
+    float: right;
+    margin: 0 0 0 0.5em;
+}
