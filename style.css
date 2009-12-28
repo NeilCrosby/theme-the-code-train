@@ -129,24 +129,20 @@ a:hover {
     margin-top: 0.5em;
 }
 
-#hd #menu .bd,
-#hd #menu .ft {
+#hd #menu ul {
     margin: 0.5em auto;
     width: 73.076em;
     position: relative;
 }
 
-#hd #menu .bd * {
+#hd #menu ul * {
     display: inline;
 }
 
-#hd #menu .ft p {
-    font-size: 100%;
-}
-
 #menu a {
-    margin: 6px 4px 6px 0;
+    margin: 6px 4px 0 0;
     padding: 1px 10px 1px 0;
+    display: inline-block; /* for ie */
     color: #000;
 }
 
