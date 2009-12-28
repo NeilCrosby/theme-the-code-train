@@ -7,10 +7,10 @@ if ( function_exists('register_sidebar') )
     'after_title' => '</h2>',
 ));
 
-if ( function_exists('register_sidebar_widget') ) {
-    register_sidebar_widget(__("TheCodeTrain RSS Widget"), 'tct_widget_rss');
-    register_sidebar_widget(__("TheCodeTrain Search Widget"), 'tct_widget_search');
-}
+#if ( function_exists('register_sidebar_widget') ) {
+#    register_sidebar_widget(__("TheCodeTrain RSS Widget"), 'tct_widget_rss');
+#    register_sidebar_widget(__("TheCodeTrain Search Widget"), 'tct_widget_search');
+#}
 
 function tct_widget_rss($args) {
     extract($args);

@@ -16,20 +16,33 @@
 <div id="doc2" class="yui-t5">
 
     <div id="hd">
+        <div class="mod">
     
     <?php if (is_single()) { ?>
-        <p class="bloginfo_name"><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></p>
+        <p class="hd bloginfo_name"><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></p>
     <?php } else { ?>
-        <h1 class="bloginfo_name"><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
+        <h1 class="hd bloginfo_name"><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
     <?php } ?>
 
-        <p class="bloginfo_title"><?php bloginfo('description'); ?></p>
+        <div class="bd">
+            <p class="bloginfo_title"><?php bloginfo('description'); ?></p>
+            <p class="rss"><a href="<?php bloginfo('rss2_url'); ?>"><img src="/wp-content/themes/theme-the-code-train/images/feed-icon-140x140.png" alt="RSS Entries" height="110"></a></p>
+        </div>
 
+        </div>
         <!-- start menu -->
         <div id="menu">
-            <ul>
-                <li><a href="<?php echo get_option('home'); ?>">Home</a></li>
+            <ul class="bd">
+                <li><a href="<?php echo get_option('home'); ?>">Blog</a></li>
                 <?php wp_list_pages('title_li=&depth=1'); ?>
+                <li id="search">
+                    <form id="searchform" method="get" action="<?php bloginfo('url'); ?>/">
+                        <p>
+                            <input type="text" name="s" size="15" value="">
+                            <input type="submit" value="Search">
+                        </p>
+                    </form>
+                </li>
             </ul>
         </div>
         <!-- end menu -->
