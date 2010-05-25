@@ -224,6 +224,10 @@ a:hover {
     list-style: disc;
 }
 
+.entry .articles p {
+    margin: 1.5em 0;
+}
+
 #bd a img {
     padding: 1px;
     border: 2px solid #fff;

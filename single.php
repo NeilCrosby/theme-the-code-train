@@ -16,6 +16,11 @@
                 <p class="showtags">
                     <?php if (function_exists('the_tags')) the_tags(__('Tags: ','ml'), ', ', '<br>'); ?>
                 </p>
+                <p class="begging">
+                    If you enjoyed this post, 
+                    <a href="/feed/">subscribe to The Code Train</a>
+                    and read more when I write more.
+                </p>
                 <div style="clear: both;"> </div>
             </div>
 
