@@ -367,3 +367,34 @@ pre code {
     float: right;
     margin: 0 0 0 0.5em;
 }
+
+#yui-main .series {
+    font-size: 86.2%;
+    width:15em;
+    float: right;
+    margin-top: 1em;
+    padding-left: 0.8em;
+    margin-left: 1em;
+    border: 1px solid #BBBBBB;
+}
+
+#yui-main .series h2 {
+    font-family: arial,helvetica,clean,sans-serif;
+    font-size: 116%;
+    color: #000;
+    line-height: 2;
+    text-decoration: none;
+    font-weight: normal;
+    padding-top: 4px;
+}
+
+.series ol {
+    
+}
+
+.series li {
+    margin-top: 0;
+    margin-right: 1em;
+}
+
+
