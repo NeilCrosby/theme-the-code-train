@@ -397,4 +397,7 @@ pre code {
     margin-right: 1em;
 }
 
+del {
+    text-decoration: line-through;
+}
 
