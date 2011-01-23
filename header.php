@@ -9,6 +9,7 @@
 
     <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>">
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+    <link rel="apple-touch-icon" href="/wp-content/themes/theme-the-code-train/images/apple-touch-icon.png">
 
     <?php wp_head(); ?>
 </head>
